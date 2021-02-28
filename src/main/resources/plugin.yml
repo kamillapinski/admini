@@ -1,0 +1,14 @@
+name: Admini
+main: com.kamillapinski.admini.AdminiPlugin
+api-version: 1.16
+version: 0.1.0
+
+commands:
+  adm-freeze:
+    description: Disable commands for player
+    usage: /<command> <player>
+    permission: admini.freeze
+  adm-unfreeze:
+    description: Unfreeze player
+    usage: /<command> <player>
+    permission: admini.unfreeze
