@@ -1,19 +1,16 @@
-package com.kamillapinski.admini;
+package com.kamillapinski.admini.listener;
 
 import com.kamillapinski.admini.services.FreezePlayerService;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
-import org.bukkit.plugin.java.JavaPlugin;
 
-public class AdminiListener implements Listener {
+public class FreezePlayerListener implements Listener {
 	private final FreezePlayerService freezePlayerService;
 
-	public AdminiListener(JavaPlugin plugin, FreezePlayerService freezePlayerService) {
+	public FreezePlayerListener(FreezePlayerService freezePlayerService) {
 		this.freezePlayerService = freezePlayerService;
-
-		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 
 	@EventHandler(priority = EventPriority.LOWEST, ignoreCancelled = true)

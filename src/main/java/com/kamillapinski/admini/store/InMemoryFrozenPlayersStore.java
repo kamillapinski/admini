@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentSkipListSet;
 
 public class InMemoryFrozenPlayersStore implements FrozenPlayersStore {
-	private static final Set<String> frozenUsernames = new ConcurrentSkipListSet<>();
+	private final Set<String> frozenUsernames = new ConcurrentSkipListSet<>();
 
 	@Override
 	public boolean isFrozen(String username) {
